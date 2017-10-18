@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>定位追踪|列表显示</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+	<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+	<link href="../../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="../../assets/alibaba-ico-fonts/iconfont.css" rel="stylesheet" />
+	<link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="mobileAlarmWrap mainMod">
+		<div class="footer_nav">
+			<ul>
+				<li class="">移动报警开</li>
+				<li class="">移动报警关</li>
+			</ul>
+		</div>
+		<div class="lampListDetail lampMod">
+			<ul>
+				<li>
+					<p><span>唐家大山东</span>
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+						<span><i class="fa fa-flag"></i></span>
+						<span><i class="fa fa-arrow-right"></i></span></p>
+				</li>
+				<li>
+					<p><span>唐家大山西</span>
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+						<span><i class="fa fa-flag"></i></span>
+						<span><i class="fa fa-arrow-right"></i></span></p>
+				</li>
+				<li>
+					<p><span>201615D/T100501492</span>
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+						<span class="red"><i class="fa fa-flag"></i></span>
+						<span><i class="fa fa-arrow-right"></i></span></p>
+				</li>
+				<li>
+					<p><span>201615D/T100501492</span>
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+						<span><i class="fa fa-flag"></i></span>
+						<span><i class="fa fa-arrow-right"></i></span></p>
+				</li>
+				<li>
+					<p><span>201615D/T100501492</span>
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+						<span><i class="fa fa-flag"></i></span>
+						<span><i class="fa fa-arrow-right"></i></span></p>
+				</li>
+				<li>
+					<p><span>201615D/T100501492</span>
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+						<span><i class="fa fa-flag"></i></span>
+						<span><i class="fa fa-arrow-right"></i></span></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../assets/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$('.fa-arrow-right').off().on('click',function(){
+			document.location = 'detail.html';
+		});
+	</script>	
+</body>
+
+</html>

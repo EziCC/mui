@@ -1,0 +1,48 @@
+<!--个人信息设置-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>完善信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<style type="text/css">
+			.St_title{
+				line-height: 2rem;
+				margin-top: 1rem;
+				color: #666;
+				font-size: 1.1rem;
+			}
+			.mgWrap{
+				margin: 0;
+			}
+			.lampNum input,.lampNum textarea{
+				flex: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="footer_nav">
+			<ul>
+				<li>保存</li>
+			</ul>
+		</div>
+		<p class="St_title">完善个人信息</p>
+		<div class="mgWrap">
+			<p class="lampNum"><label>姓名：</label><input type="text"></input></p>
+			<p class="lampNum"><label>联系电话：</label><input type="number"></input></p>
+			<p class="lampNum"><label>联系地址：</label><input type="text"></input></p>
+			<p class="lampNum"><label>行业类别：</label><input type="text"></input></p>
+			<p class="lampNum"><label>生产规模：</label><input type="text"></input></p>
+			<p class="lampNum"><label>描述信息：</label><textarea name="" rows="" cols=""></textarea></p>
+		</div>
+	</body>
+	<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".footer_nav li").on("click",function(){
+			document.location = "../home/home.html"
+		})
+	</script>
+</html>

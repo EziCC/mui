@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>调控设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="mobileDetail">
+			<div class="mgWrap">
+				<!--输入编号或扫描二维码-->
+				<p class="lampNum pageSingleLamp"><label>编号：</label><span>A28441</span></p>
+			</div>
+			<div class="mgWrap">
+				<p class="lampNum pageSingleLamp"><label>区域：</label><span>成都市金堂县高德镇来凤乡回龙村二组</span></p>
+				<p class="lampNum pageSingleLamp"><label>联系人：</label><span>张三</span></p>
+			</div>
+			<div class="mgWrap checkboxFlex">
+				<p><span>整灯开关</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+				<p><span>灯管点亮测试</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+				<p><span>清虫功能测试</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+				<p><span>倒伏报警测试</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+				<p><span>异常报警开关</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+				<p><span>定位功能开关</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+				<p><span>移动报警测试</span>
+					<span>
+						<i class="mui-switch">
+							<i class="mui-switch-handle"></i>
+						</i>
+					</span>
+				</p>
+			</div>
+		</div>
+		<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="condition.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

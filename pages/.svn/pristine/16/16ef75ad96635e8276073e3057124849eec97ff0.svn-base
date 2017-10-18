@@ -1,0 +1,100 @@
+(function(){
+	
+	$(".mui-switch").on("click",function(){
+		if($(this).hasClass("mui-active")){
+			$(this).removeClass("mui-active");
+		}else{
+			$(this).addClass("mui-active");
+		}
+	});
+	$(".backIcon").on("click",function(){
+		$(".maskWrap").hide();
+		$("#conditionNav").show();
+	})
+	var nav_li = $(".numberLampWrap .footer_nav li");
+	nav_li.on("click",function(){
+		var lampListDetail = $(".lampListDetail");
+		var lampSetBulkDetail = $(".lampSetBulkDetail");
+		var lampSetSingleDetail = $(".lampSetSingleDetail");
+		if($(this).hasClass("lampList")){//列表显示
+			var hasIt = $(this).hasClass("selected");
+			if(!hasIt){
+				$(".lampMod").hide();
+				nav_li.removeClass("selected");
+				$(this).addClass("selected");
+				lampListDetail.show();
+				$(".lampList").html("地图显示");
+				$(".lampListDetail li").on("click",function(){
+					var liSelected = $(this).hasClass("liSelected");
+					if(liSelected){
+						$(this).removeClass("liSelected");
+					}else{
+						$(this).addClass("liSelected");
+					}
+				});
+			}else{
+				$(this).removeClass("selected");
+				lampListDetail.hide();
+				$(".lampList").html("列表显示");
+			}
+		};
+		if($(this).hasClass("lampSetBulk")){//批量设置
+			var hasIt = $(this).hasClass("selected");
+			if(!hasIt){
+				var outNav = $(".numberLampWrapNav");
+				var inNav = $(".lampSetBulkDetailNav");
+				$(".lampMod").hide();
+				nav_li.removeClass("selected");
+				$(this).addClass("selected");
+				lampSetBulkDetail.show();
+				inNav.show();
+				outNav.hide();
+				$(".lampSetBulkCancer").on("click",function(){
+					inNav.hide();
+					outNav.show();
+					$(".lampSetBulk").removeClass("selected");
+					lampSetBulkDetail.hide();
+				})
+			}else{
+				$(this).removeClass("selected");
+				lampSetBulkDetail.hide();
+			}
+		};
+		if($(this).hasClass("lampSetSingle")){//单灯设置
+			var hasIt = $(this).hasClass("selected");
+			if(!hasIt){
+				var outNav = $(".numberLampWrapNav");
+				var inNav = $(".lampSetSingleDetailNav");
+				$(".lampMod").hide();
+				nav_li.removeClass("selected");
+				$(this).addClass("selected")
+				lampSetSingleDetail.show();
+				inNav.show();
+				outNav.hide();
+				$(".lampSetSingleCancer").on("click",function(){
+					inNav.hide();
+					outNav.show();
+					$(".lampSetSingle").removeClass("selected");
+					lampSetSingleDetail.hide();
+				})
+			}else{
+				$(this).removeClass("selected");
+				lampSetSingleDetail.hide();
+			}
+		};
+	})
+	$(".mobileAlarmWrap .lampListDetail ul li p span:last-child").on("click",function(){
+		$(".lampListDetail").hide();
+		$(".mobileAlarmWrap .footer_nav").hide();
+		$(".mobileDetail").show();
+		$(".showLoc").on("click",function(){
+			$(".mobileDetail").hide();
+			$(".locDetail,.locDetail .footer_nav").show();
+		})
+	})
+	//{"lat":"30.324915608431123","lon":"103.65439653396606","name":"Unnamed Road, 邛崃市成都市四川省中国"}
+	var footHeight = $('#conditionNav').height();
+	var contentHeight = document.documentElement.clientHeight - footHeight;
+	$('#map').css({height : contentHeight+"px"});
+	MapView.init({div:'map',center:{"lat":"30.324915608431123","lon":"103.65439653396606","name":"Unnamed Road, 邛崃市成都市四川省中国"}});
+})()

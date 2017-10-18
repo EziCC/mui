@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="footer_nav">
+			<ul>
+				<li>提交</li>
+				<li>取消</li>
+			</ul>
+		</div>
+		<div class="faultrptCreate">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>设备名称：</label>
+					<select name="">
+						<option value="">唐家大山东</option>
+						<option value="">唐家大山西</option>
+						<option value="">201615D/T100501492</option>
+						<option value="">201615D/T100501492</option>
+						<option value="">201615D/T100501492</option>
+					</select>
+				</div>
+				<div class="mui-input-row">
+					<label>问题描述：</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入问题描述...">
+				</div>
+				
+			</form>
+			<div class="mui-input-row" style="margin: 10px 0">
+				<textarea id="textarea" rows="10" placeholder="请输入设备故障详情，以便工作人员尽快准确处理问题。"></textarea>
+			</div>
+		</div>
+	</body>
+</html>

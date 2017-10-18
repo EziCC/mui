@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>统计查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/icons-extra.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="statisticsWrap">
+			<div class="labelStyle">
+				<p><input name="checkOne" type="radio"/><span>按工作状态查询</span><span><i>正常</i><i>异常</i></span></p>
+				<p><input name="checkOne" type="radio"/><span>按位置改变查询</span><span>
+					<select name="">
+						<option value="1">正常</option>
+						<option value="2">偏移</option>
+						<option value="3">失踪</option>
+					</select>
+				</span></p>
+				<p><input name="checkOne" type="radio"/><span>按行政区域查询</span><span><i>选择地址</i></span></p>
+				<p><input name="checkOne" type="radio"/><span>按安装日期查询</span><span><input type="text" value="2017年2月5日 至 2017年3月6日"/></span></p>
+				<p><input name="checkOne" type="radio"/><span>按类别查询</span><span>
+					<select name="">
+						<option value="1">普通</option>
+						<option value="2">气象</option>
+						<option value="3">视频</option>
+					</select>
+				</span></p>
+				<p><input name="checkOne" type="radio"/><span>按编号查询</span><span><input type="text" value="A2156"/></span></p>
+			</div>
+			<div class="typeCheck">
+				
+			</div>
+			<div class="footer_nav">
+				<ul>
+					<li>查询</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>故障申报|详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="mui-card mui-table">
+			<div class="mui-card-header">
+				<div class="mui-table-cell mui-col-xs-10">
+					201615D/T100501492
+				</div>
+				<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+	                <span class="mui-h5">12:25</span>
+	            </div>
+			</div>
+			
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					设备灯出现异常，无法开启、关闭。
+				</div>
+			</div>
+			<div class="mui-card-footer">当前状态：已处理</div>
+			<div class="mui-card-footer">处理时间：2017-03-05 18:15</div>
+			<div class="mui-card-footer">处理人：张三</div>
+			<div class="mui-card-footer">处理意见：改故障设备为异常断电所致，导致设备灯丝烧断，灯管已换。</div>
+		</div>
+	</body>
+</html>

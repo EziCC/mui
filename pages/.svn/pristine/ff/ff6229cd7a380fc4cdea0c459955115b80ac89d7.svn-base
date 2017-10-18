@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>统计查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../assets/css/mui.picker.min.css"/>
+	</head>
+	<body>
+		<div class="statisticsWrap">
+			<div class="labelStyle">
+				<p><span class="mui-radio mui-left"><input name="checkOne" type="radio"/>按工作状态查询</span><span>
+					<button id='workPicker' class="mui-btn mui-btn-block typeCheckBtn" type='button'>请选择</button>
+				</span></p>
+				<p><span class="mui-radio mui-left"><input name="checkOne" type="radio"/>按位置改变查询</span><span>
+					<button id='locPicker' class="mui-btn mui-btn-block typeCheckBtn" type='button'>请选择</button>
+				</span></p>
+				<p><span class="mui-radio mui-left"><input name="checkOne" type="radio"/>按行政区域查询</span><span>
+					<button id='showCityPicker' class="mui-btn mui-btn-block" type='button'>选择地址</button>
+				</span></p>
+				<p><span class="mui-radio mui-left"><input name="checkOne" type="radio"/>按安装日期查询</span>
+					<span>
+						<button id='dateYearBtn_1' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block MDate">选择日期</button>
+						至
+						<button id='dateYearBtn_2' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block MDate">选择日期</button>
+					</span>
+				</p>
+				<p><span class="mui-radio mui-left"><input name="checkOne" type="radio"/>按类别查询</span><span>
+					<button id='typePicker' class="mui-btn mui-btn-block typeCheckBtn" type='button'>请选择</button>
+				</span></p>
+				<p><span class="mui-radio mui-left"><input name="checkOne" type="radio"/>按编号查询</span><span>
+					<button id='numPicker' class="mui-btn mui-btn-block typeCheckBtn" type='button'>请选择</button>
+				</span></p>
+			</div>
+			<div class="typeCheck">
+				<p>
+					<span class="mui-radio mui-left"><input name="list" type="radio" value="0"/>地图</span>
+					<span class="mui-radio mui-left"><input name="list" type="radio" value="1" checked/>列表</span>
+					<span class="mui-radio mui-left"><input name="list" type="radio" value="0"/>统计</span>
+				</p>
+			</div>
+			<div class="footer_nav">
+				<ul>
+					<li>查询</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var workPicker = [{
+						value: 'normal',
+						text: '正常'
+					}, {
+						value: 'abnormal',
+						text: '异常'
+					}];
+					var locPicker = [{
+						value: 'normal',
+						text: '正常'
+					}, {
+						value: 'prompt',
+						text: '偏移'
+					}, {
+						value: 'notice',
+						text: '失踪'
+					}];
+					var typePicker = [{
+						value: 'normal',
+						text: '普通'
+					}, {
+						value: 'weather',
+						text: '气象'
+					}, {
+						value: 'video',
+						text: '视频'
+					}];
+					var numPicker = [{
+						value: 'normal',
+						text: '201615D/T100501492'
+					}, {
+						value: 'weather',
+						text: '201615D/T100122851'
+					}, {
+						value: 'video',
+						text: '201615D/T100703668'
+					}];
+					/*--- 类别选择 ---*/
+					var typeCheckBtn = $(".typeCheckBtn");
+					var typesPicker = new $.PopPicker();
+					typeCheckBtn.each(function(i,btn){
+						btn.addEventListener("tap",function(event){
+							var id = this.getAttribute('id');
+							if(id == "typePicker"){
+								typesPicker.setData(typePicker);
+								typesPicker.show(function(items){
+									btn.innerHTML = items[0].text;
+								})
+							};
+							if(id == "locPicker"){
+								typesPicker.setData(locPicker);
+								typesPicker.show(function(items){
+									btn.innerHTML = items[0].text;
+								})
+							};
+							if(id == "workPicker"){
+								typesPicker.setData(workPicker);
+								typesPicker.show(function(items){
+									btn.innerHTML = items[0].text;
+								})
+							};
+							if(id == "numPicker"){
+								typesPicker.setData(numPicker);
+								typesPicker.show(function(items){
+									btn.innerHTML = items[0].text;
+								})
+							}
+						},false)
+					});
+					
+					/*--- 日期选择  ---*/
+					var MDate = $('.MDate');
+					MDate.each(function(i, btn) {
+						btn.addEventListener('tap', function() {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							var picker = new $.DtPicker(options);
+							picker.show(function(rs) {
+								btn.innerText = rs.text;
+								picker.dispose();
+							});
+						}, false);
+					});
+					
+					/*--- 省市区选择 ---*/
+					var cityPicker = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker.show(function(items) {
+							showCityPicker.innerText = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+	</body>
+</html>

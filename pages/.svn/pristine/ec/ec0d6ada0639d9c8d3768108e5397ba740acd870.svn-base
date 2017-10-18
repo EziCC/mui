@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>气象数据</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="footer_nav">
+			<ul>
+				<li><a href="weatherData.html">当前数据</a></li>
+				<li><a href="weatherData.html">历史数据</a></li>
+			</ul>
+		</div>
+	<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

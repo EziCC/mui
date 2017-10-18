@@ -1,0 +1,15 @@
+(function(){
+    //{"lat":"30.324915608431123","lon":"103.65439653396606","name":"Unnamed Road, 邛崃市成都市四川省中国"}
+var footHeight = $('#conditionNav').height();
+var contentHeight = document.documentElement.clientHeight - footHeight;
+$('#map').css({ height: contentHeight + "px" });
+MapView.init({
+    div: 'map',
+    center: { "lat": "30.324915608431123", "lon": "103.65439653396606", "name": "Unnamed Road, 邛崃市成都市四川省中国" },
+    callback: function (map) {
+        var coordinates = [];
+        MapView.showTrajectory(map, coordinates);
+    }
+});
+
+})()

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/icons-extra.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="mobileDetail">
+			<div class="mgWrap">
+				<p class="lampNum pageSingleLamp"><label>编号：</label><span>A28441</span></p>
+			</div>
+			<div class="mgWrap">
+				<p class="lampNum pageSingleLamp"><label>区域：</label><span>成都市金堂县高德镇来凤乡回龙村二组</span></p>
+				<p class="lampNum pageSingleLamp"><label>联系人：</label><span>张三</span></p>
+			</div>
+			<div class="mgWrap">
+				<p class="lampNum pageSingleLamp"><label>初始坐标：</label><a href="ydbjxqzb.html" class="showLoc">查看坐标信息</a></p>
+				<p class="lampNum pageSingleLamp"><label>最后坐标：</label><a href="ydbjxqzb.html" class="showLoc">查看坐标信息</a></p>
+				<p class="lampNum pageSingleLamp"><label>路径移动：</label><a href="#">地图查看</a></p>
+			</div>
+			<div class="mgWrap">
+				<p class="lampNum pageSingleLamp"><label style="text-align: left;">初始位移时间：</label><label>2017年2月5日 13:00</label></p>
+				<p class="lampNum pageSingleLamp"><label style="text-align: left;">最后停止时间：</label><label>2017年2月5日 15:00</label></p>
+			</div>
+		</div>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="condition.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

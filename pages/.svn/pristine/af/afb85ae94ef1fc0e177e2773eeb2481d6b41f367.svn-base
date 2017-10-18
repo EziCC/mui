@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定手机</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="bind.css"/>
+	</head>
+	<body>
+		<!--绑定手机号码-->
+		<!--0.用户关注公众号
+		1.用户点击菜单，oauth登录
+		2.是否为新用户？
+		2.1 新用户，设置并验证手机号码
+		2.2 老用户，是否绑定设备？
+		    2.2.1 无设备，提示绑定设备
+		    2.2.2 有设备，进入主界面
+		-->
+		<div class="footer_nav">
+			<ul>
+				<a class="login_icon" id="submit">下一步</a>
+			</ul>
+		</div>
+		<div class="mgWrap">
+			<p class="lampNum "><label>手机号：</label>
+				<input type="number" value="" style="flex: 3;"  placeholder="请输入手机号" id="photoNum">
+			</p>
+			<p class="lampNum "><label>验证码：</label>
+				<input type="text" class="c_code_msg" style="margin-right:0.5rem;flex: 2;">
+				<span class="msgs" id="btn_yzm">发送验证码</span>
+			</p>
+		</div>
+		<!--弹出层-->
+		<article id="tip">
+			<div class="pack">
+				<h1 class="tc">温馨提示</h1>
+				<p class="tc"></p>
+				<a href="#">确定</a>
+			</div>
+		</article>
+	</body>
+	<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function  () {
+			var checkPhone = function(a) {
+				var patrn = /^((?:13|15|18|14|17)\d{9}|0(?:10|2\d|[3-9]\d{2})[1-9]\d{6,7})$/;
+				if (!patrn.exec(a)) return false;
+				return true;
+			};
+			$(".login_icon").on("click", function() {
+				var str = $("#photoNum").val();
+				if (str.length == 11 && checkPhone(str)) {
+					// 判断是不是11位手机号，为真提交
+					document.location = 'settings.html'
+				} else {
+					alerths("请正确输入手机号！")
+				}
+				return false;
+			})
+			/*登录按钮的颜色*/
+			$("input").change(function() {
+				var str = $("#photoNum").val();
+				var pass = $("#btn_yzm").val();
+
+				if (pass != "" || str != "") {
+					$(".login_icon").addClass("login_iconon");
+				} else {
+					$(".login_icon").removeClass("login_iconon");
+				}
+			})
+			//获取短信验证码
+			var validCode=true;
+			$(".msgs").click (function  () {
+				var time=30;
+				var code=$(this);
+				if (validCode) {
+					validCode=false;
+					code.addClass("msgs1");
+				var t=setInterval(function  () {
+					time--;
+					code.html(time+"秒");
+					if (time==0) {
+						clearInterval(t);
+					code.html("重新获取");
+						validCode=true;
+					code.removeClass("msgs1");
+		
+					}
+				},1000)
+				}
+			})
+			// 浮层控制
+			$("#tip .pack a").on("click", function() {
+				$("#tip").fadeOut()
+				$("#tip .pack p").html("")
+				$("#submit").css({
+					"pointer-events": "auto"
+				});
+				return false;
+			})
+
+			function alerths(str) {
+				$("#tip").fadeIn()
+				$("#tip .pack p").html(str)
+				return false;
+			}
+		})
+	</script>
+</html>

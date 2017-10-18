@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../assets/css/mui.picker.min.css"/>
+	</head>
+	<body>
+		<div class="numberLampWrap mainMod">
+				<div class="footer_nav numberLampWrapNav">
+					<ul>
+						<li class="lampList">列表显示</li>
+						<li class="lampSetBulk">批量设置</li>
+						<li class="lampSetSingle">单灯设置</li>
+					</ul>
+				</div>
+				<div class="lampListDetail lampMod" style="display: none;">
+					<ul>
+						<li>
+							<p><span>唐家大山东</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span><i class="fa fa-flag"></i></span>
+							<span><i class="fa fa-arrow-right"></i></span></p>
+						</li>
+						<li>
+							<p><span>唐家大山西</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span><i class="fa fa-flag"></i></span>
+							<span><i class="fa fa-arrow-right"></i></span></p>
+						</li>
+						<li>
+							<p><span>201615D/T100501492</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span class="red"><i class="fa fa-flag"></i></span>
+							<span><i class="fa fa-arrow-right"></i></span></p>
+						</li>
+						<li>
+							<p><span>201615D/T100501492</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span><i class="fa fa-flag"></i></span>
+							<span><i class="fa fa-arrow-right"></i></span></p>
+						</li>
+						<li>
+							<p><span>201615D/T100501492</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span><i class="fa fa-flag"></i></span>
+							<span><i class="fa fa-arrow-right"></i></span></p>
+						</li>
+						<li>
+							<p><span>201615D/T100501492</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span><i class="fa fa-flag"></i></span>
+							<span><i class="fa fa-arrow-right"></i></span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="lampSetBulkDetail lampMod" style="display: none;">
+					<div class="footer_nav lampSetBulkDetailNav">
+						<ul>
+							<li class="lampSetBulkSave">保存</li>
+							<li class="lampSetBulkCancer">取消修改</li>
+							<li class="lampSetBulkDefult">默认设置</li>
+						</ul>
+					</div>
+					<div style="margin: 1rem 0 4rem;">
+						<div class="bulkWrap">
+							<p class="lampNum"><label>编号：</label><input type="text" /><label>至</label><input type="text" /></p>
+							<p class="lampTitle">工作时间</p>
+							<div class="lampCtrlWrap">
+								<p class="lampCtrl inlineType"><label>光线控制</label>
+									<select name="">
+										<option value="">天黑开灯</option>
+										<option value="">凌晨开灯</option>
+									</select>
+									<label>工作计时</label>
+									<select name="">
+										<option value="">6小时</option>
+										<option value="">8小时</option>
+									</select>
+								</p>
+								<p class="lampCtrlManual inlineType"><label>手动设置</label>
+									<button id='timeBtn_1' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间</button>
+									<label>至</label>
+									<button id='timeBtn_2' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间</button>
+								</p>
+							</div>
+							<p class="lampTitle">不工作日期设定
+								<span>
+									<i class="mui-switch">
+										<i class="mui-switch-handle"></i>
+									</i>
+								</span>
+							</p>
+							<p class="notWork inlineType"><label>第一段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第二段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第三段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+
+						</div>
+					</div>
+				</div>
+				<div class="lampSetSingleDetail lampMod" style="display: none;">
+					<div class="footer_nav lampSetSingleDetailNav">
+						<ul>
+							<li class="lampSetSingleSave">保存</li>
+							<li class="lampSetSingleCancer">取消修改</li>
+							<li class="lampSetSingleDefult">默认设置</li>
+						</ul>
+					</div>
+					<div style="margin: 1rem 0 4rem;">
+						<div class="bulkWrap">
+							<p class="lampNum pageSingleLamp"><label>编号：</label><input type="text" /></p>
+							<p class="lampTitle">工作时间</p>
+							<div class="lampCtrlWrap">
+								<p class="lampCtrl inlineType"><label>光线控制</label>
+									<select name="">
+										<option value="">天黑开灯</option>
+										<option value="">凌晨开灯</option>
+									</select>
+									<label>工作计时</label>
+									<select name="">
+										<option value="">6小时</option>
+										<option value="">8小时</option>
+									</select>
+								</p>
+								<p class="lampCtrlManual inlineType"><label>手动设置</label>
+									<button id='time1' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间</button>
+									<label>至</label>
+									<button id='time2' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+								</p>
+							</div>
+							<p class="lampTitle">不工作日期设定
+								<span>
+									<i class="mui-switch">
+										<i class="mui-switch-handle"></i>
+									</i>
+								</span>
+							</p>
+							<p class="notWork inlineType"><label>第一段</label>
+								<button id='doNotWork_1' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+								<label>至</label>
+								<button id='doNotWork_2' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+							</p>
+							<p class="notWork inlineType"><label>第二段</label>
+								<button id='doNotWork_3' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+								<label>至</label>
+								<button id='doNotWork_4' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+							</p>
+							<p class="notWork inlineType"><label>第三段</label>
+								<button id='doNotWork_5' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+								<label>至</label>
+								<button id='doNotWork_6' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">选择时间 </button>
+							</p>
+							<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="condition.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($) {
+				$.init();
+				var timeBtn_1 = $('#timeBtn_1')[0];
+				var timeBtn_2 = $('#timeBtn_2')[0];
+				var btns = $('.btn');
+//				btns.each(function(i, btn) {
+					timeBtn_1.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							timeBtn_1.innerText = rs.text;
+							picker.dispose();
+						});
+					}, false);
+					timeBtn_2.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							timeBtn_2.innerText = rs.text;
+							picker.dispose();
+						});
+					}, false);
+//				});
+			})(mui);
+		</script>
+	</body>
+</html>

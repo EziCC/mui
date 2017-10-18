@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>当前数据</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="footer_nav">
+			<ul>
+				<li><a href="">当日曲线</a></li>
+				<li><a href="">当月曲线</a></li>
+				<li><a href="">指定某月</a></li>
+			</ul>
+		</div>
+		<div class="mgWrap weatherDt">
+			<p class="lampNum "><label>编号：</label><span>A28441</span></p>
+		</div>
+		<div class="mgWrap weatherDt">
+			<p class="lampNum "><label>风向：</label><span>0-360度</span></p>
+			<p class="lampNum "><label>风速：</label><span>0-67m/s</span></p>
+			<p class="lampNum "><label>空气温度：</label><span>-40~+65℃</span></p>
+			<p class="lampNum "><label>空气湿度：</label><span>0~100%</span></p>
+			<p class="lampNum "><label>雨量：</label><span>0~9999mm</span></p>
+			<p class="lampNum "><label>光照强度：</label><span>0~100000Lx</span></p>
+			<p class="lampNum "><label>紫外辐射：</label><span>0~100W/平米</span></p>
+			<p class="lampNum "><label>光和有效辐射：</label><span>0~2500μmol/平米秒</span></p>
+			<p class="lampNum "><label>总辐射量：</label><span>0~2000W/平米</span></p>
+			<p class="lampNum "><label>二氧化碳浓度：</label><span>0~6000ppm</span></p>
+		</div>
+		
+		<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

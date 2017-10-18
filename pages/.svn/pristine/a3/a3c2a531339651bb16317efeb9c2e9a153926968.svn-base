@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>调控设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../../assets/css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../assets/css/mui.picker.min.css"/>
+	</head>
+	<body>
+		<div class="footer_nav lampSetBulkDetailNav">
+			<ul>
+				<li class="lampSetBulkSave">保存</li>
+				<li class="lampSetBulkCancer"><a href="javascript:history.go(-1);">取消修改</a></li>
+				<li class="lampSetBulkDefult">默认设置</li>
+			</ul>
+		</div>
+		<div>
+			<div style="margin: 1rem 0 4rem;">
+				<div class="bulkWrap">
+					<p class="lampNum"><label>编号：</label><input type="text" /><label>至</label><input type="text" /></p>
+					<p class="lampTitle">工作时间</p>
+					<div class="lampCtrlWrap">
+						<p class="lampCtrl inlineType"><label>光线控制</label>
+							<select name="">
+								<option value="">天黑开灯</option>
+								<option value="">凌晨开灯</option>
+							</select>
+							<label>工作计时</label>
+							<select name="">
+								<option value="">6小时</option>
+								<option value="">8小时</option>
+							</select>
+						</p>
+						<p class="lampCtrlManual inlineType"><label>手动设置</label>
+							<button id='timeBtn1' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">开始时间</button>
+							<label>至</label>
+							<button id='timeBtn2' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">结束时间</button>
+						</p>
+					</div>
+					<p class="lampTitle">不工作日期设定
+						<span>
+							<i class="mui-switch">
+								<i class="mui-switch-handle"></i>
+							</i>
+						</span>
+					</p>
+					<p class="notWork inlineType"><label>第一段</label>
+						<button id='notWorkBtn1' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">开始时间</button>
+						<label>至</label>
+						<button id='notWorkBtn2' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">结束时间</button>
+					</p>
+					<p class="notWork inlineType"><label>第二段</label>
+						<button id='notWorkBtn3' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">开始时间</button>
+						<label>至</label>
+						<button id='notWorkBtn4' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">结束时间</button>
+					</p>
+					<p class="notWork inlineType"><label>第三段</label>
+						<button id='notWorkBtn5' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">开始时间</button>
+						<label>至</label>
+						<button id='notWorkBtn6' data-options='{"type":"time"}' class="btn mui-btn mui-btn-block">结束时间</button>
+					</p>
+					<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../assets/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($) {
+				$.init();
+				var timeBtn1 = $('#timeBtn1')[0];
+				var timeBtn2 = $('#timeBtn2')[0];
+				var btn = $('.btn');
+//				btns.each(function(i, btn) {
+					timeBtn1.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							timeBtn1.innerText = rs.text;
+							picker.dispose();
+						});
+					}, false);
+					timeBtn2.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						var picker2 = new $.DtPicker(options);
+						picker.show(function(rs) {
+							timeBtn2.innerText = rs.text;
+							picker.dispose();
+						});
+					}, false);
+//				});
+			})(mui);
+		</script>
+
+	</body>
+</html>

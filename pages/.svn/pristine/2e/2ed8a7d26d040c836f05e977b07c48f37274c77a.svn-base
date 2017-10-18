@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/icons-extra.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="map"></div>
+		<div class="footer_nav" id="conditionNav">
+			<ul>
+				<li id="numberLamp" class="numberLamp">编号灯</li>
+				<li id="mobileAlarm" class="mobileAlarm">移动报警</li>
+				<li id="lodgingAlarm" class="lodgingAlarm">倒伏报警</li>
+				<li id="navigation" class="navigation">地图导航</li>
+			</ul>
+		</div>
+		<div class="maskWrap hide">
+			<!--编号灯-->
+			<div class="backIcon mui-icon mui-icon-back">返回</div>
+			<div class="numberLampWrap hide mainMod">
+				<div class="footer_nav numberLampWrapNav">
+					<ul>
+						<li class="lampList">列表显示</li>
+						<li class="lampSetBulk">批量设置</li>
+						<li class="lampSetSingle">单灯设置</li>
+					</ul>
+				</div>
+				<div class="lampListDetail lampMod" style="display: none;">
+					<ul>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span class="red">故障</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="lampSetBulkDetail lampMod" style="display: none;">
+					<div class="footer_nav lampSetBulkDetailNav">
+						<ul>
+							<li class="lampSetBulkSave">保存</li>
+							<li class="lampSetBulkCancer">取消修改</li>
+							<li class="lampSetBulkDefult">默认设置</li>
+						</ul>
+					</div>
+					<div>
+						<div class="bulkWrap">
+							<p class="lampNum"><label>编号：</label><input type="text" /><label>至</label><input type="text" /></p>
+							<p class="lampTitle">工作时间</p>
+							<div class="lampCtrlWrap">
+								<p class="lampCtrl inlineType"><label>光线控制</label>
+									<select name="">
+										<option value="">天黑开灯</option>
+										<option value="">凌晨开灯</option>
+									</select>
+									<label>工作计时</label>
+									<select name="">
+										<option value="">6小时</option>
+										<option value="">8小时</option>
+									</select>
+								</p>
+								<p class="lampCtrlManual inlineType"><label>手动设置</label>
+									<select name="">
+										<option value="">19:30</option>
+										<option value="">20:00</option>
+									</select>
+									<label>至</label>
+									<select name="">
+										<option value="">21:00</option>
+										<option value="">22:30</option>
+									</select>
+								</p>
+							</div>
+							<p class="lampTitle">不工作日期设定
+								<span>
+									<i class="mui-switch">
+										<i class="mui-switch-handle"></i>
+									</i>
+								</span>
+							</p>
+							<p class="notWork inlineType"><label>第一段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第二段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第三段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+
+						</div>
+					</div>
+				</div>
+				<div class="lampSetSingleDetail lampMod" style="display: none;">
+					<div class="footer_nav lampSetSingleDetailNav">
+						<ul>
+							<li class="lampSetSingleSave">保存</li>
+							<li class="lampSetSingleCancer">取消修改</li>
+							<li class="lampSetSingleDefult">默认设置</li>
+						</ul>
+					</div>
+					<div>
+						<div class="bulkWrap">
+							<p class="lampNum pageSingleLamp"><label>编号：</label><input type="text" /></p>
+							<p class="lampTitle">工作时间</p>
+							<div class="lampCtrlWrap">
+								<p class="lampCtrl inlineType"><label>光线控制</label>
+									<select name="">
+										<option value="">天黑开灯</option>
+										<option value="">凌晨开灯</option>
+									</select>
+									<label>工作计时</label>
+									<select name="">
+										<option value="">6小时</option>
+										<option value="">8小时</option>
+									</select>
+								</p>
+								<p class="lampCtrlManual inlineType"><label>手动设置</label>
+									<select name="">
+										<option value="">19:30</option>
+										<option value="">20:00</option>
+									</select>
+									<label>至</label>
+									<select name="">
+										<option value="">21:00</option>
+										<option value="">22:30</option>
+									</select>
+								</p>
+							</div>
+							<p class="lampTitle">不工作日期设定
+								<span>
+									<i class="mui-switch">
+										<i class="mui-switch-handle"></i>
+									</i>
+								</span>
+							</p>
+							<p class="notWork inlineType"><label>第一段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第二段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第三段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobileAlarmWrap hide mainMod">
+				222
+			</div>
+			<div class="lodgingAlarmWrap hide mainMod">
+				333
+			</div>
+			<div class="navigationWrap hide mainMod">
+				444
+			</div>
+		</div>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="condition.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

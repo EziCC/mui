@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="./assets/css/mui.min.css" rel="stylesheet" />
+	<link href="./assets/css/icons-extra.css" rel="stylesheet" />
+	<link href="./assets/css/style.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+	<div class="mui-content">
+	</div>
+	<script src="./assets/js/mui.min.js"></script>
+	<!--微信oauth登录和认证。如果是新用户，则跳转到手机号码注册页面；如果是老用户，判断有没有设备，没有设备则提示绑定设备；有设备才进入home页面-->
+	<script type="text/javascript">
+		document.location = './pages/home/home.html';
+	</script>
+</body>
+
+</html>

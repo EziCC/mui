@@ -1,0 +1,321 @@
+a{
+	color: #000;
+}
+p{
+	margin: 0;
+}
+.footer_nav{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+    z-index: 999;
+}
+.footer_nav ul{
+	width: 100%;
+	display: flex;
+	margin: 0;
+    padding: 0;
+}
+.footer_nav li{
+	float: left;
+	list-style: none;
+	flex: 1;
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+    background: #2AC845;
+    line-height: 3rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+.footer_nav a{
+	color: #ffffff;
+}
+.maskWrap{
+	width: 100%;
+	height: 100%;
+	/*position: fixed;*/
+    margin: 2rem 0 4rem 0;
+}
+.liSelected{
+    background: #cfc !important;
+}
+.hide{
+	display: none;
+}
+.red{
+	color: #ff0000;
+}
+.backIcon{
+	font-size: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 2rem;
+    text-align: center;
+}
+.mui-switch{
+	display: inline-block;
+    top: 0.5rem;
+    line-height: 1.5rem;
+}
+.lampListDetail ul{
+	width: 100%;
+	margin: 1rem 0 0 0;
+    padding: 0 1rem;
+}
+.lampListDetail ul p{
+	width: 100%;
+	display: flex;
+    margin: 0.2rem 0 0;
+}
+.lampListDetail li{
+	list-style: none;
+	border-bottom: 1px solid #dddddd;
+	background: #fff;
+    line-height: 3rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.lampListDetail li p > *{
+	flex: 0.5;
+    text-align: center;
+}
+.lampListDetail li span:first-child {
+    flex: 2;
+    margin-left: 2rem;
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lampNum {
+    padding: 1rem;
+    margin: 0;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+.lampNum>*{
+	flex: 1;
+}
+.lampNum input {
+    /*width: 7rem;*/
+    height: 2rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+}
+.lampNum * {
+    line-height: 2rem;
+}
+.lampTitle{
+	line-height: 2rem;
+	margin: 0;
+    padding-left: 1rem;
+}
+.inlineType select {
+    /*width: 7rem;*/
+    border: 1px solid #ddd !important;
+    margin: 0;
+}
+.inlineType {
+    background: #ffffff;
+    margin: 0;
+    line-height: 3rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    display: flex;
+}
+.inlineType>*{
+	flex: 1;
+}
+.pageSingleLamp input{
+	flex: 3;
+	font-size: 1rem;
+}
+.pageSingleLamp label{
+	flex: 1;
+}
+.mgWrap p span{
+	flex: 4 !important;
+	text-align: left;
+}
+.mgWrap{
+	margin-top: 1rem;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.mgWrap p{
+	border-bottom: 1px solid #eeeeee;
+}
+.mgWrap p label{
+	flex: 1;
+}
+.mgWrap p a{
+	flex: 3;
+}
+.mobileDetail,.locDetail{
+	padding: 1rem;
+}
+.locMapArea{
+	padding: 1rem;
+	width: 100%;
+	height: 300px;;
+	background: #ffffff;;
+}
+.checkboxFlex p{
+	display: flex;
+	background: #ffffff;
+}
+.checkboxFlex span{
+	flex: 1;
+	text-align: center !important;
+	line-height: 3rem;
+}
+.statisticsWrap{
+	padding: 1rem;
+}
+.labelStyle{
+	background: #ffffff;
+	padding: 1rem;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.labelStyle p{
+	margin: 0;
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	line-height: 3rem;
+}
+.labelStyle p span:first-child{
+	text-align: left;
+    padding-left: 2rem;
+}
+.labelStyle p span{
+	flex: 2;
+}
+.labelStyle p span i{
+	font-style: normal;
+	margin-right: .2rem;
+}
+.labelStyle input {
+	font-size: 14px;
+	padding: 0;
+	border: 0;
+}
+.labelStyle select{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ddd !important;
+}
+.labelStyle input[type=radio] {
+    margin-right: 5px;
+}
+.typeCheck{
+	width: 100%;
+	background: #ffffff;
+	margin-top: 1rem;
+	/*padding: 1rem 0;*/
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.typeCheck p{
+	margin: 0;
+	display: flex;
+	line-height: 3rem;
+}
+.typeCheck span{
+	flex: 1;
+	text-align: left;
+    padding-left: 3rem;
+}
+.mgWrap.weatherDt p label {
+    flex: 2;
+    text-align: left;
+}
+/*---采集点marker---*/
+.cjdMkWrap {
+	width: 130px;
+	height: 80px;
+	/*border: 1px solid #000000;*/
+	position: absolute;
+	top: 15px;
+	text-align: center;
+}
+
+.cjdIcon {
+	width: 32px;
+	height: 32px;
+	margin: 0 49px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 32px 32px;
+}
+.cjdIcon.lighting{
+	background-color: rgba(255, 255, 0, 0.7);
+}
+.cjdEngNum,.cjdMenu {
+	color: #ffffff;
+	width: 100%;
+	height: 20px;
+	font-size: 10px;
+	font-weight: 100;
+	line-height: 20px;
+	background: rgba(0, 0, 0, .5);
+	border-radius: 10px;
+	padding: 0 5px;
+	margin-top: 2px;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cjdMenu{
+	display: none;
+	font-size: 1rem;
+	line-height: 2rem;
+}
+.cjdMenu ul{
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cjdOperate {
+    width: 100%;
+}
+.cjdOperate i{
+	width: 1.5rem;
+	padding: 5px;
+}
+
+.cjdOperate:hover {
+	color:#57c8f1;
+}
+.cjdIcon .iconfont{
+	font-size: 24px;
+	height: 24px;
+    width: 24px;
+    line-height: 32px;
+}
+.mui-btn-block{
+	font-size: 14px;
+}
+.mui-radio.mui-left input[type=radio] {
+    left: 0;
+    padding-top: 0.4rem;
+}
+.typeCheck .mui-radio.mui-left input[type=radio]{
+	left: 1rem;
+}
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before {
+    color: #2AC845;
+}
+.weatherDt .mui-radio input[type="radio"]{
+	top: 1rem;
+}
+.mui-checkbox.mui-left input[type=checkbox]{
+    left: 0;
+    top: 0.5rem;
+}

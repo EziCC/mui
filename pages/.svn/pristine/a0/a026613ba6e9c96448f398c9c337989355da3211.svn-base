@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>当前数据</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../assets/css/mui.picker.min.css"/>
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="footer_nav">
+			<ul>
+				<li><a href="">当日曲线</a></li>
+				<li><a href="">当月曲线</a></li>
+				<li><a href="">指定某月</a></li>
+			</ul>
+		</div>
+		<div class="weatherMain">
+			<div class="mgWrap weatherDt">
+				<p class="lampNum "><label>编号：</label><span>A28441</span></p>
+			</div>
+			<div class="mgWrap weatherDt">
+				<p class="lampNum mui-radio"><label>风向：</label><span>0-360度</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>风速：</label><span>0-67m/s</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>空气温度：</label><span>-40~+65℃</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>空气湿度：</label><span>0~100%</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>雨量：</label><span>0~9999mm</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>光照强度：</label><span>0~100000Lx</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>紫外辐射：</label><span>0~100W/平米</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>光和有效辐射：</label><span>0~2500μmol/平米秒</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>总辐射量：</label><span>0~2000W/平米</span><input name="weather" type="radio"/></p>
+				<p class="lampNum mui-radio"><label>二氧化碳浓度：</label><span>0~6000ppm</span><input name="weather" type="radio"/></p>
+			</div>
+			<div class="mgWrap" style="margin: 1rem 0 5rem;">
+				<button id='dateBtn' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">选择日期 ...</button>
+			</div>
+		</div>
+		<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function($) {
+				$.init();
+				var dateBtn = $('#dateBtn')[0];
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							dateBtn.innerText = rs.text;
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+		</script>
+	</body>
+</html>

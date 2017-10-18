@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>工作状态</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/icons-extra.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="map"></div>
+		<div class="footer_nav" id="conditionNav">
+			<ul>
+				<li id="numberLamp" class="numberLamp"><a href="bhd.html">编号灯</a></li>
+				<li id="mobileAlarm" class="mobileAlarm"><a href="ydbj.html">移动报警</a></li>
+				<li id="lodgingAlarm" class="lodgingAlarm"><a href="dfbj.html">倒伏报警</a></li>
+				<li id="navigation" class="navigation"><a href="dtdh.html">地图导航</a></li>
+			</ul>
+		</div>
+		<div class="maskWrap hide">
+			<!--编号灯-->
+			<div class="backIcon mui-icon mui-icon-back">返回</div>
+			<!--<div class="numberLampWrap hide mainMod">
+				<div class="footer_nav numberLampWrapNav">
+					<ul>
+						<li class="lampList">列表显示</li>
+						<li class="lampSetBulk">批量设置</li>
+						<li class="lampSetSingle">单灯设置</li>
+					</ul>
+				</div>
+				<div class="lampListDetail lampMod" style="display: none;">
+					<ul>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span class="red">故障</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="lampSetBulkDetail lampMod" style="display: none;">
+					<div class="footer_nav lampSetBulkDetailNav">
+						<ul>
+							<li class="lampSetBulkSave">保存</li>
+							<li class="lampSetBulkCancer">取消修改</li>
+							<li class="lampSetBulkDefult">默认设置</li>
+						</ul>
+					</div>
+					<div>
+						<div class="bulkWrap">
+							<p class="lampNum"><label>编号：</label><input type="text" /><label>至</label><input type="text" /></p>
+							<p class="lampTitle">工作时间</p>
+							<div class="lampCtrlWrap">
+								<p class="lampCtrl inlineType"><label>光线控制</label>
+									<select name="">
+										<option value="">天黑开灯</option>
+										<option value="">凌晨开灯</option>
+									</select>
+									<label>工作计时</label>
+									<select name="">
+										<option value="">6小时</option>
+										<option value="">8小时</option>
+									</select>
+								</p>
+								<p class="lampCtrlManual inlineType"><label>手动设置</label>
+									<select name="">
+										<option value="">19:30</option>
+										<option value="">20:00</option>
+									</select>
+									<label>至</label>
+									<select name="">
+										<option value="">21:00</option>
+										<option value="">22:30</option>
+									</select>
+								</p>
+							</div>
+							<p class="lampTitle">不工作日期设定
+								<span>
+									<i class="mui-switch">
+										<i class="mui-switch-handle"></i>
+									</i>
+								</span>
+							</p>
+							<p class="notWork inlineType"><label>第一段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第二段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第三段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+
+						</div>
+					</div>
+				</div>
+				<div class="lampSetSingleDetail lampMod" style="display: none;">
+					<div class="footer_nav lampSetSingleDetailNav">
+						<ul>
+							<li class="lampSetSingleSave">保存</li>
+							<li class="lampSetSingleCancer">取消修改</li>
+							<li class="lampSetSingleDefult">默认设置</li>
+						</ul>
+					</div>
+					<div>
+						<div class="bulkWrap">
+							<p class="lampNum pageSingleLamp"><label>编号：</label><input type="text" /></p>
+							<p class="lampTitle">工作时间</p>
+							<div class="lampCtrlWrap">
+								<p class="lampCtrl inlineType"><label>光线控制</label>
+									<select name="">
+										<option value="">天黑开灯</option>
+										<option value="">凌晨开灯</option>
+									</select>
+									<label>工作计时</label>
+									<select name="">
+										<option value="">6小时</option>
+										<option value="">8小时</option>
+									</select>
+								</p>
+								<p class="lampCtrlManual inlineType"><label>手动设置</label>
+									<select name="">
+										<option value="">19:30</option>
+										<option value="">20:00</option>
+									</select>
+									<label>至</label>
+									<select name="">
+										<option value="">21:00</option>
+										<option value="">22:30</option>
+									</select>
+								</p>
+							</div>
+							<p class="lampTitle">不工作日期设定
+								<span>
+									<i class="mui-switch">
+										<i class="mui-switch-handle"></i>
+									</i>
+								</span>
+							</p>
+							<p class="notWork inlineType"><label>第一段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第二段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="notWork inlineType"><label>第三段</label>
+								<select name="">
+									<option value="">19:30</option>
+									<option value="">20:00</option>
+								</select>
+								<label>至</label>
+								<select name="">
+									<option value="">21:00</option>
+									<option value="">22:30</option>
+								</select>
+							</p>
+							<p class="lampNum"><label>清虫间隔：</label><input type="text" value="30"/><label>分钟</label></p>
+						</div>
+					</div>
+				</div>
+			</div>-->
+			<!--<div class="mobileAlarmWrap mainMod">
+				<div class="footer_nav">
+					<ul>
+						<li class="">移动报警开</li>
+						<li class="">移动报警关</li>
+					</ul>
+				</div>
+				<div class="lampListDetail lampMod">
+					<ul>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span class="red">故障</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobileDetail hide">
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>编号：</label><span>A28441</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>区域：</label><span>成都市金堂县高德镇来凤乡回龙村二组</span></p>
+						<p class="lampNum pageSingleLamp"><label>联系人：</label><span>张三</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>初始坐标：</label><a href="#" class="showLoc">查看坐标信息</a></p>
+						<p class="lampNum pageSingleLamp"><label>最后坐标：</label><a href="#" class="showLoc">查看坐标信息</a></p>
+						<p class="lampNum pageSingleLamp"><label>路径移动：</label><a href="#">地图查看</a></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label style="text-align: left;">初始位移时间：</label><label>2017年2月5日 13:00</label></p>
+						<p class="lampNum pageSingleLamp"><label style="text-align: left;">最后停止时间：</label><label>2017年2月5日 15:00</label></p>
+					</div>
+				</div>
+				<div class="locDetail hide">
+					<div class="footer_nav">
+						<ul>
+							<li class="">复制信息</li>
+							<li class="">截屏</li>
+							<li class="">导航</li>
+						</ul>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>编号：</label><span>A28441</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>区域：</label><span>成都市金堂县高德镇来凤乡回龙村二组</span></p>
+						<p class="lampNum pageSingleLamp"><label>联系人：</label><span>张三</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>经度：</label><span>32.21E</span></p>
+						<p class="lampNum pageSingleLamp"><label>纬度：</label><span>35.11N</span></p>
+					</div>
+					<div class="locMapArea">
+						
+					</div>
+				</div>
+			</div>-->
+			<div class="lodgingAlarmWrap hide mainMod">
+				<div class="footer_nav">
+					<ul>
+						<li class="">移动报警开</li>
+						<li class="">移动报警关</li>
+					</ul>
+				</div>
+				<div class="lampListDetail lampMod">
+					<ul>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span class="red">故障</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+						<li>
+							<p><span><input type="checkbox"/>编号：A21501</span>
+							<span>
+								<i class="mui-switch">
+									<i class="mui-switch-handle"></i>
+								</i>
+							</span>
+							<span>正常</span>
+							<span>详情</span></p>
+						</li>
+					</ul>
+				</div>
+				<div class="mobileDetail hide">
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>编号：</label><span>A28441</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>区域：</label><span>成都市金堂县高德镇来凤乡回龙村二组</span></p>
+						<p class="lampNum pageSingleLamp"><label>联系人：</label><span>张三</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>初始坐标：</label><a href="#" class="showLoc">查看坐标信息</a></p>
+						<p class="lampNum pageSingleLamp"><label>最后坐标：</label><a href="#" class="showLoc">查看坐标信息</a></p>
+						<p class="lampNum pageSingleLamp"><label>路径移动：</label><a href="#">地图查看</a></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label style="text-align: left;">初始位移时间：</label><label>2017年2月5日 13:00</label></p>
+						<p class="lampNum pageSingleLamp"><label style="text-align: left;">最后停止时间：</label><label>2017年2月5日 15:00</label></p>
+					</div>
+				</div>
+				<div class="locDetail hide">
+					<div class="footer_nav">
+						<ul>
+							<li class="">复制信息</li>
+							<li class="">截屏</li>
+							<li class="">导航</li>
+						</ul>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>编号：</label><span>A28441</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>区域：</label><span>成都市金堂县高德镇来凤乡回龙村二组</span></p>
+						<p class="lampNum pageSingleLamp"><label>联系人：</label><span>张三</span></p>
+					</div>
+					<div class="mgWrap">
+						<p class="lampNum pageSingleLamp"><label>经度：</label><span>32.21E</span></p>
+						<p class="lampNum pageSingleLamp"><label>纬度：</label><span>35.11N</span></p>
+					</div>
+					<div class="locMapArea">
+						
+					</div>
+				</div>
+			</div>
+			<div class="navigationWrap hide mainMod">
+				地图导航
+			</div>
+		</div>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="condition.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

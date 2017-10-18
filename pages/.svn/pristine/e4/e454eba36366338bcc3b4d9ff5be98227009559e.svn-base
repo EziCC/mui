@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>故障申报|列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="footer_nav">
+			<ul>
+				<li>发起申报</li>
+			</ul>
+		</div>
+		<div class="faultrptMain">
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h4 class="mui-ellipsis">唐家大山东</h4>
+		                    <h5>处理结果：已处理</h5>
+		                    <p class="mui-h6 mui-ellipsis">设备灯出现异常，无法开启、关闭。</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                    <span class="mui-h5">12:25</span>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h4 class="mui-ellipsis">唐家大山西</h4>
+		                    <h5>处理结果：已处理</h5>
+		                    <p class="mui-h6 mui-ellipsis">设备灯出现异常，无法开启、关闭。</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                    <span class="mui-h5">12:25</span>
+		                     
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h4 class="mui-ellipsis">201615D/T100501492</h4>
+		                    <h5>处理结果：已处理</h5>
+		                    <p class="mui-h6 mui-ellipsis">设备灯出现异常，无法开启、关闭。</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                    <span class="mui-h5">12:25</span>
+		                    
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h4 class="mui-ellipsis">201615D/T100501492</h4>
+		                    <h5>处理结果：已处理</h5>
+		                    <p class="mui-h6 mui-ellipsis">设备灯出现异常，无法开启、关闭。</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                    <span class="mui-h5">12:25</span>
+		                   
+		                </div>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <div class="mui-table">
+		                <div class="mui-table-cell mui-col-xs-10">
+		                    <h4 class="mui-ellipsis">201615D/T100501492</h4>
+		                    <h5>处理结果：已处理</h5>
+		                    <p class="mui-h6 mui-ellipsis">设备灯出现异常，无法开启、关闭。</p>
+		                </div>
+		                <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+		                    <span class="mui-h5">12:25</span>
+		                     
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+		</div>
+		<script src="../../assets/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$('.mui-table-view-cell').off().on('click',function(){
+				document.location = 'detail.html';
+			});
+			$(".footer_nav ul li").off().on("click",function(){
+				document.location = 'create.html'
+			})
+		</script>
+	</body>
+</html>

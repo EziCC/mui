@@ -1,0 +1,9 @@
+(function(){
+	$(".mui-switch").on("click",function(){
+		if($(this).hasClass("mui-active")){
+			$(this).removeClass("mui-active");
+		}else{
+			$(this).addClass("mui-active");
+		}
+	})
+})();

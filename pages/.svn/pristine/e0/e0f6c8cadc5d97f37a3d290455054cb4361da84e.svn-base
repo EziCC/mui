@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../assets/css/mui.min.css" rel="stylesheet" />
+		<link href="../../assets/css/icons-extra.css" rel="stylesheet" />
+		<link href="../../assets/css/style.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		.mui-content ul li.mui-table-view-cell {
+		    width: 48%;
+		    background-color: #2AC845 !important;
+		    margin: 1% !important;
+		    padding: 10% 3% !important;
+	        border-radius: 0.5rem;
+		    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+		}
+		.mui-grid-view.mui-grid-9 .mui-media {
+		    color: #ffffff;
+		}
+		.mui-media-body{
+			color: #ffffff !important;
+		}
+	</style>
+	<body>
+		<div class="mui-content">
+	        <ul class="mui-table-view mui-grid-view mui-grid-9">
+	            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3"><a href="../mydevices/map.html">
+	                    <span class="mui-icon mui-icon-map"></span>
+	                    <div class="mui-media-body">工作状态</div></a></li>
+	            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3"><a href="../debug/debug.html">
+	                    <span class="mui-icon mui-icon-settings"><span class="mui-badge">5</span></span>
+	                    <div class="mui-media-body">调控设置</div></a></li>
+	            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3"><a href="../tracking/map.html">
+	                    <span class="mui-icon mui-icon-paperplane"></span>
+	                    <div class="mui-media-body">定位追踪</div></a></li>
+	            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3"><a href="../statistics/statistics.html">
+	                    <span class="mui-icon-extra mui-icon-extra-calendar" style="font-size: 2.4rem;padding: 1px;"></span>
+	                    <div class="mui-media-body">统计查询</div></a></li>
+	            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3"><a href="../envdata/map.html">
+	                    <span class="mui-icon mui-icon-search"></span>
+	                    <div class="mui-media-body">气象数据</div></a></li>
+	            <li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3"><a href="../faultrpt/list.html">
+	                    <span class="mui-icon mui-icon-email"></span>
+	                    <div class="mui-media-body">故障申报</div></a></li>
+	        </ul>
+		</div>
+		<script src="../../assets/js/mui.min.js"></script>
+		<script type="text/javascript">
+//			mui.init()
+		</script>
+	</body>
+
+</html>
